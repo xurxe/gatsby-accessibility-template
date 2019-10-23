@@ -8,6 +8,7 @@ import type { HeaderTypes } from '../../types.js'
 type Props = {
   data: HeaderTypes,
 }
+
 const Header = ({ data }: Props) => {
   const { id } = data
 

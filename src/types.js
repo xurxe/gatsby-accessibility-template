@@ -39,7 +39,6 @@ export type IndexTypes = {
   id: string,
   header: HeaderTypes,
   main: MainTypes,
-  footer: FooterTypes,
 }
 
 export type AppTypes = {

@@ -17,6 +17,16 @@ export const query = graphql`
   {
     contentfulSeo {
       id
+      title
+      description
+      author
+      keywords
+      image {
+        id
+        file {
+          url
+        }
+      }
     }
     contentfulIndex {
       id
@@ -24,9 +34,6 @@ export const query = graphql`
         id
       }
       main {
-        id
-      }
-      footer {
         id
       }
     }

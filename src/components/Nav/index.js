@@ -13,6 +13,7 @@ type Props = {
 
 const Nav = ({ data }: Props) => {
   const { contentfulNavigationBar, allContentfulPage } = data
+  console.log(data)
   const { id } = contentfulNavigationBar
   let desktop = useState(true)
   let closed = useState(true)
@@ -75,10 +76,18 @@ const Nav = ({ data }: Props) => {
         >
           Button
         </button>
-        <Link to="/"></Link>
-        {allContentfulPage.edges.map(page => (
-          <Link key={page.id} to={page.slug}></Link>
-        ))}
+        <ol>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          {allContentfulPage.edges.map(page => (
+            <li>
+              <Link key={page.node.id} to={page.node.slug}>
+                {page.node.slug}
+              </Link>
+            </li>
+          ))}
+        </ol>
         Navigation: {id}
       </nav>
     </ReactResizeDetector>

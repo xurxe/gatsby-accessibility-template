@@ -11,9 +11,14 @@ type Props = {
 }
 
 const Footer = ({ data }: Props) => {
-  const { id } = data
-  
-  const jsx = <footer className="Footer">Footer: {id}</footer>
+  const { contentfulFooter } = data
+  const { id } = contentfulFooter
+
+  const jsx = (
+    <footer className="Footer">
+      <p>Footer: {id}</p>
+    </footer>
+  )
   return jsx
 }
 

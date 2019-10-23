@@ -16,7 +16,7 @@ type Props = {
 
 const App = ({ data }: Props) => {
   const { contentfulSeo, contentfulIndex } = data
-  const { header, main, footer } = contentfulIndex
+  const { header, main } = contentfulIndex
 
   const jsx = (
     <div className="App">
@@ -24,7 +24,7 @@ const App = ({ data }: Props) => {
       <Nav></Nav>
       <Header data={header}></Header>
       <Main data={main}></Main>
-      <Footer data={footer}></Footer>
+      <Footer></Footer>
     </div>
   )
   return jsx

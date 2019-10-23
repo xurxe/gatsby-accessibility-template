@@ -9,11 +9,13 @@ module.exports = ({ config }) => {
   config.module.rules[0].use[0].options.presets = [
     require.resolve("@babel/preset-react"),
     require.resolve("@babel/preset-env"),
+    require.resolve("@babel/preset-flow"),
   ]
 
-  // use @babel/plugin-proposal-class-properties for class arrow functions
   config.module.rules[0].use[0].options.plugins = [
+    // use @babel/plugin-proposal-class-properties for class arrow functions
     require.resolve("@babel/plugin-proposal-class-properties"),
+    // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
     require.resolve("babel-plugin-remove-graphql-queries"),
   ]
 
